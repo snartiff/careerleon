@@ -5,14 +5,17 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
   </head>
-  <div class="flash">
-      <% flash.each do |key, message| %>
-        <%= message %>
-      <% end %>
-  </div>
-
   <body>
+    <div class="container">
+    <%= render 'layouts/navbar' %>
+    <div class="flash">
+        <% flash.each do |key, message| %>
+          <%= message %>
+        <% end %>
+    </div>
     <%= yield %>
+  </div>
   </body>
 </html>
