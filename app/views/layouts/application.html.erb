@@ -3,10 +3,14 @@
   <head>
     <title>Careerleon</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
+  <div class="flash">
+      <% flash.each do |key, message| %>
+        <%= message %>
+      <% end %>
+  </div>
 
   <body>
     <%= yield %>
