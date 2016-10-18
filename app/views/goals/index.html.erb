@@ -1,0 +1,15 @@
+<div class="content">
+  <div class="index link">
+    <%= link_to "new career goal", new_goal_path %>
+  </div>
+  <div class="goal list">
+    <h1>MY CAREER GOALS</h1>
+    <ul>
+      <% @goals.each do |goal| %>
+        <% unless current_user.nil? %>
+        <% end %>
+         <li class="goal"><%= link_to("#{goal.title}", goal) %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
