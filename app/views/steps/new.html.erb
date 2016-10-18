@@ -1,0 +1,20 @@
+<h2 class="review">CREATE A NEW STEP</h2>
+
+<%= form_for [@goal, @step] do |f| %>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description, required: true, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :deadline %><br />
+    <%= f.text_field :deadline, required: true, autofocus: true %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Submit" %>
+  </div>
+
+<% end %>
+
+<%= link_to 'Back', goals_path(@goal) %>

@@ -6,6 +6,7 @@ class GoalsController < ApplicationController
 
   def show
     @goal = Goal.find(params[:id])
+    @steps = @goal.steps
   end
 
   def new

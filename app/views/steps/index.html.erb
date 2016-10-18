@@ -1,0 +1,15 @@
+<div class="content">
+  <div class="index_link">
+    <%= link_to "new_step", new_step_path %>
+  </div>
+  <div class="step_list">
+    <h4>MY STEPS</h4>
+    <ul>
+      <% @steps.each do |step| %>
+        <% unless current_user.nil? %>
+        <% end %>
+         <li class="goal"><%="#{step.title}"%></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
