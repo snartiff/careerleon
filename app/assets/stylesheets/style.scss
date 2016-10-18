@@ -10,8 +10,8 @@ ul {
   background-color: #F1F1F1;
   margin: 0;
 }
+
 #navbar {
-  border-bottom: 2px solid black;
   background-color: #8BC34A;
   top: 0;
   left: 0;
@@ -22,22 +22,24 @@ ul {
     justify-content: flex-end;
     align-items: center;
     padding: 15px;
-    padding-bottom: 0px;
+    padding-bottom: 3px;
     margin-top: 0px;
     padding-top: 0px;
   }
   .links {
-    a:link {
+    a {
       font-family: 'Indie Flower';
-      text-decoration: none;
-      padding: 0 15px;
       color: white;
+      padding: 0 15px;
+    }
+    a:hover {
+      color: yellow;
+    }
+    a:link {
+      text-decoration: none;
     }
     a:visited {
-      font-family: 'Indie Flower';
       text-decoration: none;
-      padding: 0 15px;
-      color: white;
     }
   }
   .logo {
@@ -51,10 +53,16 @@ ul {
     img {
       display: inline-flex;
       width: auto;
-      height: 50px;
+      height: 75px;
       padding-bottom: 0px;
       margin-top: 0px;
       margin-bottom: 0px;
+    }
+    img:hover {
+      opacity: 0;
+      transition: opacity .5s ease-in-out;
+      -moz-transition: opacity .5s ease-in-out;
+      -webkit-transition: opacity .5s ease-in-out;
     }
     .logoheader {
       display:inline-flex;
@@ -69,6 +77,9 @@ ul {
         text-decoration: none;
         color: white;
       }
+      a:hover {
+        color: yellow;
+      }
     }
   }
   .logosub {
@@ -77,7 +88,7 @@ ul {
     padding-bottom: 0px;
     margin-bottom: 0px;
     margin-top: 0px;
-    margin-left: 72px;
+    margin-left: 95px;
     color: white;
     font-family: 'Indie Flower';
   }
