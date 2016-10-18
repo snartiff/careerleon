@@ -28,49 +28,56 @@ ul {
   }
   .links {
     a:link {
+      font-family: 'Indie Flower';
       text-decoration: none;
       padding: 0 15px;
       color: white;
     }
     a:visited {
+      font-family: 'Indie Flower';
       text-decoration: none;
       padding: 0 15px;
       color: white;
     }
   }
-  .logoheader {
-    text-align: left;
-    padding-left: 0px;
-    margin-left: 0px;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    font-size: 4rem;
-    a {
-      font-family: 'Indie Flower';
-      text-decoration: none;
-      color: white;
-    }
-  }
   .logo {
-    padding-left: 0px;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
+    display: inline;
     margin-left: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
     align-items: center;
     padding: 15px;
-    .logoimg {
-      display: flex;
-      margin-right: 0px;
-      padding-right: 0px;
-      width: 20%;
+    img {
+      display: inline-flex;
+      width: auto;
+      height: 50px;
+      padding-bottom: 0px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+    .logoheader {
+      display:inline-flex;
+      font-family: 'Indie Flower';
+      text-align: left;
+      padding-left: 0px;
+      margin-left: 0px;
+      padding-bottom: 0px;
+      margin-bottom: 0px;
+      font-size: 3rem;
+      a {
+        text-decoration: none;
+        color: white;
+      }
     }
   }
   .logosub {
+    margin-right: 0px;
     padding-top: 0px;
     padding-bottom: 0px;
     margin-bottom: 0px;
     margin-top: 0px;
-    display: flex;
+    margin-left: 72px;
     color: white;
     font-family: 'Indie Flower';
   }
