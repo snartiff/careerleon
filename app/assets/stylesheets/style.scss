@@ -53,13 +53,16 @@ ul {
     img {
       display: inline-flex;
       width: auto;
-      height: 50px;
+      height: 75px;
       padding-bottom: 0px;
       margin-top: 0px;
       margin-bottom: 0px;
     }
     img:hover {
       opacity: 0;
+      transition: opacity .5s ease-in-out;
+      -moz-transition: opacity .5s ease-in-out;
+      -webkit-transition: opacity .5s ease-in-out;
     }
     .logoheader {
       display:inline-flex;
@@ -85,7 +88,7 @@ ul {
     padding-bottom: 0px;
     margin-bottom: 0px;
     margin-top: 0px;
-    margin-left: 72px;
+    margin-left: 95px;
     color: white;
     font-family: 'Indie Flower';
   }
