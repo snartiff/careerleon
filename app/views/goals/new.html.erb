@@ -1,5 +1,13 @@
-<div class="new_goal">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script>
+  $(function() {
+    $( "#datepicker" ).datepicker();
+  });
+</script>
 
+<div class="new_goal">
 <h1 class="new_goal_header">new career goal</h1>
 <%= form_for(@goal) do |f| %>
 
@@ -11,7 +19,7 @@
   <%= f.text_area :description%><br>
 
   <%= f.label :deadline %><br>
-  <%= f.text_field :deadline %><br>
+  <%= f.text_field :deadline, :type => "text", :id => "datepicker"  %><br>
 
   <%= f.submit "Add Career Goal" %>
 </div>
