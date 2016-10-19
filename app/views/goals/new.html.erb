@@ -1,5 +1,4 @@
 <div class="new_goal">
-
 <h1 class="new_goal_header">new career goal</h1>
 <%= form_for(@goal) do |f| %>
 
@@ -11,7 +10,7 @@
   <%= f.text_area :description%><br>
 
   <%= f.label :deadline %><br>
-  <%= f.text_field :deadline %><br>
+  <%= f.text_field :deadline, :as => :datepicker %><br>
 
   <%= f.submit "Add Career Goal" %>
 </div>
