@@ -1,3 +1,12 @@
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script>
+  $(function() {
+    $( "#datepicker" ).datepicker();
+  });
+</script>
+
 <h2 class="review">CREATE A NEW STEP</h2>
 <%= form_for [@goal, @step] do |f| %>
   <div class="field">
@@ -6,8 +15,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :deadline %><br />
-    <%= f.text_field :deadline, required: true, autofocus: true %>
+    <%= f.label :deadline %><br>
+    <%= f.text_field :deadline, :type => "text", :id => "datepicker" %><br>
   </div>
 
   <div class="actions">
