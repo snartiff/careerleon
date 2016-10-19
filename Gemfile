@@ -13,11 +13,11 @@ gem 'devise'
 gem 'jquery-ui-rails'
 
 group :development, :test do
+  gem 'database_cleaner'
   gem 'pry-rails'
-  gem 'rspec-rails'
   gem 'capybara'
   gem 'launchy'
-  gem 'factory_girl_rails'
+  gem "factory_girl_rails", "~> 4.0"
   gem 'valid_attribute'
   gem 'shoulda-matchers', require: false
 end
@@ -27,6 +27,11 @@ group :development do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+end
+
+group :test do
+  gem 'rspec-rails'
+  gem 'coveralls', require: false
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
