@@ -11,15 +11,21 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'jquery-ui-rails'
+gem 'faker'
 
 group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails'
+  gem "factory_girl_rails"
   gem 'capybara'
   gem 'launchy'
   gem 'factory_girl'
   gem 'valid_attribute'
   gem 'shoulda-matchers', require: false
+end
+
+group :test do
+  gem 'database_cleaner'
 end
 
 group :development do
