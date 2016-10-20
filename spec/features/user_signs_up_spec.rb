@@ -1,6 +1,4 @@
-require 'spec_helper'
 require 'rails_helper'
-require 'factory_girl_rails'
 
 feature 'user creates account' do
   scenario 'specifies valid and required information' do
