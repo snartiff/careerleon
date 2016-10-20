@@ -5,11 +5,7 @@ feature "registered user can add a goal" do
     user = FactoryGirl.create(:user)
     goal = FactoryGirl.build(:goal)
 
-    visit root_path
-    click_link 'Sign In'
-    fill_in 'Email', with: user.email
-    fill_in 'Password', with: user.password
-    click_button 'Log in'
+    user_signs_in(user)
 
     visit goals_path
     click_link "new career goal"
@@ -21,5 +17,6 @@ feature "registered user can add a goal" do
 
     click_button "Add Career Goal"
     expect(page).to have_content "#{goal.title}"
+
   end
 end
