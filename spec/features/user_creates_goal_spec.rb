@@ -1,5 +1,5 @@
 require "rails_helper"
-
+#test not functioning
 feature "registered user can add a goal" do
   scenario "registered user successfully adds a goal" do
     user = FactoryGirl.create(:user)

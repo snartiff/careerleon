@@ -1,10 +1,15 @@
 class GoalsController < ApplicationController
   before_action :authenticate_user!
   def index
-    @goals = Goal.all
+    @goals = current_user.goals.all
   end
 
   def show
+    if params[:step_id].present? == false
+      @goal = Goal.find(params[:id])
+    else
+      @step = Step.find(params[:id])
+    end
     if @step != nil
       @step = Step.find(params[:id])
       @goal = @step.goal
