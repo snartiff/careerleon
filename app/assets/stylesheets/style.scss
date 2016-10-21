@@ -1,7 +1,9 @@
 body {
   margin: 0px;
   background-color: #F1F1F1;
+  font-family: 'Indie Flower';
 }
+
 
 ul {
   list-style: none;
@@ -9,6 +11,23 @@ ul {
 
 .container {
   margin: 0;
+}
+
+#blog {
+  font-family: 'Indie Flower';
+
+  img {
+    display: block;
+    margin: auto;
+    width: auto;
+    height: 300px;
+  }
+  .blog_header {
+    text-align: center;
+  }
+  .blog_text {
+    text-align: justify;
+  }
 }
 
 #navbar {

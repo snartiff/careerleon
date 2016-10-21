@@ -1,5 +1,5 @@
 class StepsController < ApplicationController
-    before_action :authenticate_user!, except: [:index, :show]
+    before_action :authenticate_user!
 
     def index
       @goal = Goal.find(params[:goal_id])
