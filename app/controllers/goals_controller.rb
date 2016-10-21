@@ -5,11 +5,13 @@ class GoalsController < ApplicationController
   end
 
   def show
-    if params[:step_id].present? == false
-      @goal = Goal.find(params[:id])
-    else
-      @step = Step.find(params[:id])
-    end
+    # if params[:step_id].present? == false
+    #
+    #   @goal = Goal.find(params[:goal_id])
+    # else
+    #   @step = Step.find(params[:id])
+    # end
+    @step = Step.find(params[:id])
     if @step != nil
       @step = Step.find(params[:id])
       @goal = @step.goal
