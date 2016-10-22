@@ -11,7 +11,7 @@ class Quote extends Component {
 
   componentDidMount() {
     $.ajax({
-      url:'http://quotes.rest/qod.json',
+      url:'https://quotes.rest/qod.json',
     })
     .done(data => {
       debugger;
