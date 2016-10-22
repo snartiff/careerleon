@@ -11,7 +11,11 @@ class Quote extends Component {
 
   componentDidMount() {
     $.ajax({
-      url:'https://quotes.rest/qod.json',
+      url:'https://quotes.rest/qod.json'
+      beforeSend: function (request)
+           {
+               request.setRequestHeader("Access-Control-Allow-Origin", "*");
+           },
     })
     .done(data => {
       debugger;
