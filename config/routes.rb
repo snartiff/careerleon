@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root "users#index"
 
   resources :users
-
+  resources :inspirations, only: [:index]
   resources :goals do
     resources :steps
 
