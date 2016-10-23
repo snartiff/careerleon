@@ -12,6 +12,19 @@ ul {
   margin: 0;
 }
 
+#inspiration {
+  text-align: center;
+  .quote {
+    img {
+      border-radius: 5%;
+    }
+    border-radius: 100%;
+    padding-top: 60px;
+    border:2px solid white;
+    background-color: white;
+  }
+}
+
 #blog {
   font-family: 'Indie Flower';
 
