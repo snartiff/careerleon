@@ -5,31 +5,30 @@ class Quote extends Component {
     super(props);
     this.state = {
       quote: '',
-      author: '',
     }
   }
 
   componentDidMount() {
     $.ajax({
-      url:'https://quotes.rest/qod.json'
+      url:'http://quotes.rest/quote/image.json',
+      headers: {'X-TheySaidSo-Api-Secret' : 'vIGjh2UM2tJDFIADKiHwUweF' },
       beforeSend: function (request)
-           {
-               request.setRequestHeader("Access-Control-Allow-Origin", "*");
-           },
+         {
+          request.setRequestHeader("Access-Control-Allow-Headers");
+         },
     })
     .done(data => {
-      debugger;
       this.setState({
-        author: data.contents.quotes[0].author,
-        quote: data.contents.quotes[0].quote
+        quote: data.contents.qimage.download_uri
       })
+      debugger;
     })
   }
 
   render() {
     return(
       <div className="quote">
-          <h2>"{this.state.quote}"</h2>
+          <img src={this.state.quote}/>
           <h4>-{this.state.author}</h4>
       </div>
     )
