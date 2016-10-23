@@ -21,18 +21,18 @@ class Quote extends Component {
       this.setState({
         quote: data.contents.qimage.download_uri
       })
-      debugger;
     })
   }
 
   render() {
     return(
       <div className="quote">
-          <img src={this.state.quote}/>
+          <img id="qimg" src={this.state.quote} onClick={this.componentDidMount.bind(this)}/>
           <h4>-{this.state.author}</h4>
       </div>
     )
   }
 }
+
 
 export default Quote;
