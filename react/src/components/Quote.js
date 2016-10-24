@@ -14,7 +14,8 @@ class Quote extends Component {
       headers: {'X-TheySaidSo-Api-Secret' : 'vIGjh2UM2tJDFIADKiHwUweF' },
       beforeSend: function (request)
          {
-          request.setRequestHeader("Access-Control-Allow-Headers");
+           request.setRequestHeader("Access-Control-Allow-Headers");
+           request.setRequestHeader("Access-Control-Allow-Origin");
          },
     })
     .done(data => {
