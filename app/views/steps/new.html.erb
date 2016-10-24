@@ -6,8 +6,8 @@
     $( "#datepicker" ).datepicker();
   });
 </script>
-
-<h2 class="review">CREATE A NEW STEP</h2>
+<div id="new_step">
+<h1>CREATE A NEW STEP</h1>
 <%= form_for [@goal, @step] do |f| %>
   <div class="field">
     <%= f.label :description %><br />
@@ -24,5 +24,5 @@
   </div>
 
 <% end %>
-
 <%= link_to 'Back', goal_path(@goal) %>
+</div>
