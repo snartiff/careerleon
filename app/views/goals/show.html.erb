@@ -1,19 +1,24 @@
-<div class="show goal">
-  <h1><%=@goal.title%></h1>
-  <h2><%=@goal.deadline%></h2>
-  <p><%=@goal.description%></p>
+<div id="goal">
+  <div class="title">
+    <h1 class="header"><%=@goal.title%></h1>
+    <p class="description"><%=@goal.description%></p>
+  </div>
+  <div class="show_steps">
+    <h4>STEPS I NEED TO TAKE TO ACHIEVE MY GOAL:</h4>
+    <ul>
+      <% counter = 0 %>
+      <% @steps.each do |step| %>
+      <% counter += 1 %>
+      <li><%=counter%>.) <%= step.description %>: </li>
+      <li class="step_deadline"><%= step.deadline %></li>
+      <% end %>
+    </li>
+    </ul>
+  </div>
+  <div class="goal_deadline">
+    <h2>FINISH THIS GOAL BY: <%=@goal.deadline%></h2>
+  </div>
+  <div class="link">
+    <a><%= link_to 'Create new steps for goal', new_goal_step_path(@goal)%></a>
+  </div>
 </div>
-
-<div class="show steps">
-  <h4>STEPS</h4>
-  <ul>
-    <li>
-    <% @steps.each do |step| %>
-    DESCRIPTION: <%= step.description %><br />
-    DEADLINE: <%= step.deadline %><br />
-    <% end %>
-  </li>
-  </ul>
-</div>
-
-<%= link_to 'Create steps for goal', new_goal_step_path(@goal)%>

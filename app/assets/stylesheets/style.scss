@@ -12,6 +12,56 @@ ul {
   margin: 0;
 }
 
+#goal{
+  margin-top: 0px;
+  padding-bottom: 0px;
+  text-align: center;
+  ul {
+    font-size: 200%;
+    li {
+      display: inline-block;
+    }
+  }
+  h3 {
+    font-size: 200%;
+  }
+  h4 {
+    font-size: 200%;
+  }
+  .title{
+    margin-top: 0px;
+    padding-top: 0px;
+    background-color: white;
+    .header {
+      font-size: 300%;
+    }
+  }
+  .step_deadline{
+    color: red;
+  }
+  .goal_deadline{
+    font-size: 200%;
+    color: red;
+  }
+  .link {
+    margin-bottom: 100px;
+    padding: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    font-size: 200%;
+    background-color: #8BC34A;
+    border: 2px black;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    a:hover {
+      color: yellow;
+    }
+  }
+}
 #inspiration {
   text-align: center;
   .quote {

@@ -5,7 +5,7 @@ class GoalsController < ApplicationController
   end
 
   def show
-    if params[:step_id].present? == false
+    if params[:step_id].present?
       @goal = Goal.find(params[:id])
     else
       @step = Step.find(params[:id])

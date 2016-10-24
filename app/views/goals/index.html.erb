@@ -5,10 +5,12 @@
   <div class="goal list">
     <h1>MY CAREER GOALS</h1>
     <ul>
+      <% counter = 0 %>
       <% @goals.each do |goal| %>
+      <% counter += 1 %>
         <% unless current_user.nil? %>
         <% end %>
-         <li class="goal"><%= link_to("#{goal.title}", goal) %></li>
+         <li class="goal"><%="#{counter}.) "%><%= link_to("#{goal.title}", goal) %></li>
       <% end %>
     </ul>
   </div>
