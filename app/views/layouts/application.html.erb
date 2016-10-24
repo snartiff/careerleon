@@ -8,14 +8,12 @@
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
   </head>
   <body>
-    <div class="container">
     <%= render 'layouts/navbar' %>
-    <div class="flash">
-        <% flash.each do |key, message| %>
-          <%= message %>
-        <% end %>
+    <div id="flash">
+      <% flash.each do |name, message| %>
+        <%= content_tag :div, message, :id => "flash_#{name}" %>
+      <% end %>
     </div>
     <%= yield %>
-  </div>
   </body>
 </html>

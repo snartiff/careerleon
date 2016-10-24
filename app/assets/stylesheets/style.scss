@@ -1,3 +1,4 @@
+
 body {
   margin: 0px;
   background-color: #F1F1F1;
@@ -8,14 +9,82 @@ ul {
   list-style: none;
 }
 
-.container {
-  margin: 0;
+form {
+   text-align: center;
+   margin:auto;
+   }
+
+input[type=text] {
+  border: 2px solid #8BC34A;
+  width: 50%;
+}
+
+textarea {
+  border: 2px solid #8BC34A;
+  width: 50%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+input[type=submit] {
+  border-radius: 10%;
+  font-family: 'Indie Flower';
+  color: white;
+  background-color: #8BC34A;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  padding: 10px;
+  margin-left: 200px;
+  margin-right: 200px;
+  font-size: 200%;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+}
+input[type=submit]:hover {
+  background-color: purple;
+}
+
+.review {
+  text-align: center;
+}
+
+#flash_success {
+  color: green;
+}
+
+#flash_notice {
+  color: red;
+}
+
+#profile {
+  text-align: center;
+  h1 {
+    color: #8BC34A;
+  }
+}
+
+#new_goal {
+  text-align: center;
+  h1 {
+    color: #8BC34A;
+  }
+}
+
+#new_step {
+  h1 {
+    text-align: center;
+    color: #8BC34A;
+  }
 }
 
 #goal{
-  margin-top: 0px;
-  padding-bottom: 0px;
   text-align: center;
+  h1 {
+    color: #8BC34A;
+  }
+  p {
+    color: #8BC34A;
+  }
   ul {
     font-size: 200%;
     li {
@@ -29,12 +98,17 @@ ul {
     font-size: 200%;
   }
   .title{
+    display: inline;
     margin-top: 0px;
     padding-top: 0px;
     background-color: white;
     .header {
       font-size: 300%;
     }
+  }
+  .show_steps{
+    border-radius: 20%;
+    background-color: white;
   }
   .step_deadline{
     color: red;
@@ -43,31 +117,72 @@ ul {
     font-size: 200%;
     color: red;
   }
-  .link {
-    margin-bottom: 100px;
-    padding: 20px;
+}
+
+#edit_user {
+  h1 {
+    color: #8BC34A;
+  }
+  text-align: center;
+  input[type=submit] {
+    border-radius: 10%;
+    font-family: 'Indie Flower';
+    color: white;
+    background-color: #8BC34A;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    padding: 10px;
     margin-left: 200px;
     margin-right: 200px;
     font-size: 200%;
-    background-color: #8BC34A;
-    border: 2px black;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222);
-    a {
-      color: white;
-      text-decoration: none;
-    }
-    a:hover {
-      color: yellow;
-    }
+  }
+  input[type=email]{
+    border: 2px solid #8BC34A;
+    width: 50%;
+  }
+  input[type=password]{
+    border: 2px solid #8BC34A;
+    width: 50%;
   }
 }
+
+#goals_index {
+  h1 {
+    text-align: center;
+    color: #8BC34A;
+  }
+  a {
+    color: black;
+    text-decoration: none;
+  }
+  a:hover {
+    color: purple;
+  }
+  a:visited {
+    text-decoration: none;
+  }
+  .goal_list {
+    text-align: center;
+    font-size: 150%;
+  }
+}
+
+#new_goal{
+  .new_goal_header {
+    text-align: center;
+  }
+}
+
 #inspiration {
   text-align: center;
+  color: #8BC34A;
   .quote {
-    padding-top: 60px;
-    border:2px solid white;
-    background-color: white;
+    // padding-top: 60px;
+    padding-bottom: 60px;
+    // border:2px solid white;
+    // background-color: white;
     img {
       -webkit-filter: drop-shadow(5px 5px 5px #222);
       filter: drop-shadow(5px 5px 5px #222);
@@ -78,7 +193,9 @@ ul {
 
 #blog {
   font-family: 'Indie Flower';
-
+ h1 {
+   color: #8BC34A;
+ }
   img {
     display: block;
     margin: auto;
@@ -94,6 +211,8 @@ ul {
 }
 
 #navbar {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
   background-color: #8BC34A;
   top: 0;
   left: 0;

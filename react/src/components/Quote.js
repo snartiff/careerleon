@@ -28,7 +28,6 @@ class Quote extends Component {
     return(
       <div className="quote">
           <img id="qimg" src={this.state.quote} onClick={this.componentDidMount.bind(this)}/>
-          <h4>-{this.state.author}</h4>
       </div>
     )
   }

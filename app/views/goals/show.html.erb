@@ -10,15 +10,15 @@
       <% @steps.each do |step| %>
       <% counter += 1 %>
       <li><%=counter%>.) <%= step.description %>: </li>
-      <li class="step_deadline"><%= step.deadline %></li>
+      <li class="step_deadline"><%= step.deadline %></li></br>
       <% end %>
     </li>
     </ul>
   </div>
-  <div class="goal_deadline">
+  <div class="goal_deadline"> </a>
     <h2>FINISH THIS GOAL BY: <%=@goal.deadline%></h2>
   </div>
   <div class="link">
-    <a><%= link_to 'Create new steps for goal', new_goal_step_path(@goal)%></a>
+    <a class="linka"><%= button_to 'Create New Steps for Goal', new_goal_step_path(@goal), method: :get%></a>
   </div>
 </div>
