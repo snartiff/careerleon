@@ -10,13 +10,11 @@ class Quote extends Component {
 
   componentDidMount() {
     $.ajax({
-      url:'//quotes.rest/quote/image.json/',
-      headers: {'X-TheySaidSo-Api-Secret' : 'vIGjh2UM2tJDFIADKiHwUweF' },
-      beforeSend: function (request)
-         {
-           request.setRequestHeader("Access-Control-Allow-Headers");
-           request.setRequestHeader("Access-Control-Allow-Origin");
-         },
+      url:'https://quotes.rest/quote/image.json?api_key=vIGjh2UM2tJDFIADKiHwUweF',
+      // beforeSend: function (request)
+      //    {
+      //      request.setRequestHeader("Access-Control-Allow-Origin", "*");
+      //    },
     })
     .done(data => {
       this.setState({
