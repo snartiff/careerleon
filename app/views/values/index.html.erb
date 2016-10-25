@@ -1,23 +1,18 @@
 <head>
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
-  <style>
-  .draggable {
-    width: 100px;
-    height: 100px;
-    background: #ccc;
-  }
-  </style>
   <script src="//code.jquery.com/jquery-1.12.4.js"></script>
   <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
-<body>
-<div class="draggable"></div>
-<div class="draggable">Drag me2</div>
-
+<div id="values">
+<h1>WHAT DO YOU VALUE MOST IN A CAREER?</h1>
+<h3>drag and sort the bubbles</h3>
+<% @values.each do |value| %>
+  <div class="draggable">
+      <%= "#{value}" %></br>
+  </div>
+<% end %>
+</div>
 
 <script>
 $( ".draggable" ).draggable();
 </script>
-
-</body>
-</html>
