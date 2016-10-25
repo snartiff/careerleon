@@ -7,12 +7,18 @@
 <h1>WHAT DO YOU VALUE MOST IN A CAREER?</h1>
 <h3>drag and sort the bubbles</h3>
 <% @values.each do |value| %>
-  <div class="draggable">
+  <div class="sortable">
+    <div class="draggable">
       <%= "#{value}" %></br>
-  </div>
+    </div>
+  <div>
 <% end %>
 </div>
 
 <script>
-$( ".draggable" ).draggable();
+$( ".draggable" ).draggable({
+  connectToSortable: ".sortable"
+});
+$( ".sortable" ).sortable();
+$( ".sortable" ).disableSelection();
 </script>
