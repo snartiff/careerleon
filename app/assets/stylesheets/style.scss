@@ -70,6 +70,23 @@ input[type=submit]:hover {
     color: #8BC34A;
   }
 }
+  h3 {
+    color: #8BC34A;
+  }
+  .draggable {
+    display: inline-block;
+    text-align: center;
+    background-image: url('bubble.png');
+    background-size: 140px 140px;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+}
+
 
 #flash_success {
   color: green;
