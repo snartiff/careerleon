@@ -5,25 +5,35 @@ class GoalsController < ApplicationController
   end
 
   def show
-    if params[:step_id].present?
-      @goal = Goal.find(params[:id])
-    elsif params[:step_id] == nil
-      @goal = Goal.find(params[:id])
-      @step = Step.new
-      @steps = @goal.steps
-    else
-      @step = Step.find(params[:id])
-    end
-    if params[:step_id] == nil
-      @step = Step.new
-    elsif @step != nil
-      @step = Step.find(params[:id])
-      @goal = @step.goal
-      @steps = @goal.steps
-    else
-      @goal = Goal.find(params[:id])
-      @steps = @goal.steps
-    end
+    @goal = Goal.find(params[:id])
+    @steps = @goal.steps
+    # if Step.exists? == false
+    #   @goal = Goal.find(params[:id])
+    # end
+    # if params[:id].present? && Step.exists? == true
+    #   @goal = Step.find(params[:id]).goal
+    #   @steps = @goal.steps
+    # elsif params[:id] == nil && Step.exists? == true
+    #   @goal = Step.find(params[:id]).goal
+    #   @step = Step.new
+    #   @steps = @goal.steps
+    # elsif Step.exists? == false
+    #   @goal = Goal.find(params[:id])
+    # else
+    #   @step = Step.find(params[:id])
+    # end
+    # if params[:id] == nil
+    #   @step = Step.new
+    # elsif @step != nil
+    #   @step = Step.find(params[:id])
+    #   @goal = @step.goal
+    #   @steps = @goal.steps
+    # elsif Step.exists? == false
+    #   @goal = Goal.find(params[:id])
+    # else
+    #   @goal = Step.find(params[:id]).goal
+    #   @steps = @goal.steps
+    # end
   end
 
   def new
