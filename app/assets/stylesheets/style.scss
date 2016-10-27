@@ -88,6 +88,35 @@ input[type=submit]:hover {
     color: #8BC34A;
   }
 
+#ui-datepicker-div {
+  background-color: white;
+  font-size: 20px;
+}
+
+#ui-datepicker-div > table > tbody > tr {
+  background-color: white;
+}
+
+  .ui-datepicker .ui-datepicker-title {
+    font-family: 'Indie Flower';
+    font-size: 30px;
+  }
+
+  .ui-datepicker {
+    td {
+      background-color: white;
+    }
+  }
+  .ui-datepicker table {
+    text-align: center;
+    font-family: 'Indie Flower';
+    border-collapse: collapse;
+    font-size: .9em;
+    margin: 0 0 .4em;
+    width: 100%;
+    background-color: white;
+}
+
   .draggable.ui-draggable-dragging {
     background-size: 210px 210px;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
