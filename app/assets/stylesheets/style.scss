@@ -26,6 +26,15 @@ textarea {
   padding-bottom: 20px;
 }
 
+input[type=email]{
+  border: 2px solid #8BC34A;
+  width: 50%;
+}
+input[type=password]{
+  border: 2px solid #8BC34A;
+  width: 50%;
+}
+
 input[type=submit] {
   border-radius: 10%;
   font-family: 'Indie Flower';
@@ -48,24 +57,52 @@ input[type=submit]:hover {
   text-align: center;
 }
 
-#values {
+#log-in {
   text-align: center;
   h1 {
     color: #8BC34A;
   }
+}
+
+#values {
+  text-align: center;
+  h1 {
+  color: #8BC34A;
+  }
+}
+
+
+#sign-up {
+  text-align: center;
+  h1 {
+    color: #8BC34A;
+  }
+}
   h3 {
     color: #8BC34A;
   }
   .draggable {
+    display: inline-block;
     text-align: center;
+<<<<<<< HEAD
     background-image: url('https://pixabay.com/static/uploads/photo/2013/07/13/10/43/blue-157652_960_720.png');
     background-size: 100px 100px;
     background-repeat: no-repeat;
     background-position: center;
     padding-top: 40px;
     padding-bottom: 40px;
+=======
+    background-image: url('bubble.png');
+    background-size: 140px 140px;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-right: 100px;
+    padding-left: 100px;
+>>>>>>> 4390ccb46f9a3442932e61d8b74a36b9837097eb
   }
-}
+
 #flash_success {
   color: green;
 }
@@ -125,8 +162,13 @@ input[type=submit]:hover {
     }
   }
   .show_steps{
-    border-radius: 20%;
+    margin-right: 200px;
+    margin-left: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-color: white;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
   }
   .step_deadline{
     color: red;
@@ -155,14 +197,6 @@ input[type=submit]:hover {
     font-size: 200%;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222);
-  }
-  input[type=email]{
-    border: 2px solid #8BC34A;
-    width: 50%;
-  }
-  input[type=password]{
-    border: 2px solid #8BC34A;
-    width: 50%;
   }
 }
 
@@ -197,10 +231,7 @@ input[type=submit]:hover {
   text-align: center;
   color: #8BC34A;
   .quote {
-    // padding-top: 60px;
     padding-bottom: 60px;
-    // border:2px solid white;
-    // background-color: white;
     img {
       -webkit-filter: drop-shadow(5px 5px 5px #222);
       filter: drop-shadow(5px 5px 5px #222);

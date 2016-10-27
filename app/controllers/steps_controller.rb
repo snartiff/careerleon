@@ -23,7 +23,7 @@ class StepsController < ApplicationController
       @step.goal = @goal
       @step.user_id = current_user.id
       if @step.save
-        redirect_to goal_path(@step)
+        redirect_to goal_path(@goal)
         flash[:success] = "Hooray #{current_user.first_name}! You created a new step!"
       else
         @step.errors.any?

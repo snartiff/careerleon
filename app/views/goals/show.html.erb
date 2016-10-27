@@ -7,11 +7,14 @@
     <h4>STEPS I NEED TO TAKE TO ACHIEVE MY GOAL:</h4>
     <ul>
       <% counter = 0 %>
-      <% @steps.each do |step| %>
-      <% counter += 1 %>
-      <li><%=counter%>.) <%= step.description %>: </li>
-      <li class="step_deadline"><%= step.deadline %></li></br>
-      <% end %>
+      <% if @steps == nil %>
+      <% @steps = "" %>
+        <% else  @steps.each do |step| %>
+        <% counter += 1 %>
+        <li><%=counter%>.) <%= step.description %>: </li>
+        <li class="step_deadline"><%= step.deadline %></li></br>
+        <% end %>
+        <% end %>
     </li>
     </ul>
   </div>
