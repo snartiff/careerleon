@@ -5,14 +5,30 @@
 </head>
 <div id="values">
 <h1>WHAT DO YOU VALUE MOST IN A CAREER?</h1>
-<h3>drag and sort the bubbles</h3>
+<h3>drag your favorites into the cloud</h3>
+  <div>
+    <img class="droppable", src='/assets/cloud.png'></img>
+  </div>
+
 <% @values.each do |value| %>
   <div class="draggable">
-      <%= "#{value}" %></br>
+      <li><%= "#{value}" %></br></li>
   </div>
 <% end %>
-</div>
+
+
 
 <script>
-$( ".draggable" ).draggable();
+$( function() {
+   $( ".draggable" ).draggable();
+   $( ".droppable" ).droppable({
+     drop: function( event, ui ) {
+       $( this )
+         .addClass( "ui-state-highlight" )
+         .find( "img" )
+           .html( "Dropped!" );
+     }
+   });
+ } );
+// $( ".draggable" ).draggable();
 </script>

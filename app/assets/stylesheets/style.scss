@@ -68,6 +68,12 @@ input[type=submit]:hover {
   text-align: center;
   h1 {
   color: #8BC34A;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  }
+  h3 {
+    margin-top: 0px;
+    padding-top: 0px;
   }
 }
 
@@ -81,9 +87,16 @@ input[type=submit]:hover {
   h3 {
     color: #8BC34A;
   }
+
+  .draggable.ui-draggable-dragging {
+    background-size: 210px 210px;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+  }
+
+
   .draggable {
     display: inline-block;
-    text-align: center;
     background-image: url('bubble.png');
     background-size: 140px 140px;
     background-repeat: no-repeat;
@@ -92,6 +105,18 @@ input[type=submit]:hover {
     padding-bottom: 100px;
     padding-right: 100px;
     padding-left: 100px;
+    li {
+      list-style-type: none;
+    }
+  }
+
+  .droppable {
+    border-radius: 20%;
+    text-align: center;
+    background-size: contain;
+    display: block;
+    margin: auto;
+    background-size: contain;
   }
 
 #flash_success {
