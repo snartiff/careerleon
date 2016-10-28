@@ -27,7 +27,7 @@ class StepsController < ApplicationController
         flash[:success] = "Hooray #{current_user.first_name}! You created a new step!"
       else
         @step.errors.any?
-        flash[:notice] =  @step.errors.full_messages.join(", ")
+        flash[:error] =  @step.errors.full_messages.join(", ")
         render :new
       end
     end

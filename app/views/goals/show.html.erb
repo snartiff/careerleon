@@ -4,14 +4,14 @@
     <p class="description"><%=@goal.description%></p>
   </div>
   <div class="show_steps">
-    <h4>STEPS I NEED TO TAKE TO ACHIEVE MY GOAL:</h4>
+    <h4>Steps I Need to Take to Achieve My Goal :</h4>
     <ul>
       <% counter = 0 %>
       <% if @steps == nil %>
       <% @steps = "" %>
         <% else  @steps.each do |step| %>
         <% counter += 1 %>
-        <li><%=counter%>.) <%= step.description %>: </li>
+        <li><%=counter%>.) <%= step.description %></li>
         <li class="step_deadline"><%= step.deadline %></li></br>
         <% end %>
         <% end %>
@@ -19,7 +19,7 @@
     </ul>
   </div>
   <div class="goal_deadline"> </a>
-    <h2>FINISH THIS GOAL BY: <%=@goal.deadline%></h2>
+    <h2>Finish This Goal Before: <%=@goal.deadline%></h2>
   </div>
   <div class="link">
     <a class="linka"><%= button_to 'Create New Steps for Goal', new_goal_step_path(@goal), method: :get%></a>
