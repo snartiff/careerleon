@@ -2,32 +2,41 @@
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
   <script src="//code.jquery.com/jquery-1.12.4.js"></script>
   <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="jquery.ui.touch-punch.min.js"></script>
 </head>
 <div id="values">
-<h1>WHAT DO YOU VALUE MOST IN A CAREER?</h1>
-<h3>drag your favorites into the cloud</h3>
+  <h1>WHAT DO YOU VALUE MOST IN A CAREER?</h1>
+  <h3>drag your favorites into the cloud</h3>
   <div>
     <img class="droppable", src='/assets/cloud.png'></img>
-  </div>
+</div>
+<div class=javaValues></div>
 
-<% @values.each do |value| %>
-  <div class="draggable">
+  <% @values.each do |value| %>
+    <div class="draggable">
       <li><%= "#{value}" %></br></li>
-  </div>
-<% end %>
-
-
+    </div>
+  <% end %>
+</div>
 
 <script>
+var valueArray = [];
+var printValues = "";
 $(function() {
-   $( ".draggable" ).draggable();
-   $( ".droppable" ).droppable({
-     drop: function( event, ui ) {
-       $( this )
-         .addClass( "ui-state-highlight" )
-         .find( "img" )
-      }
-    });
+ $( ".draggable" ).draggable();
+ $( ".droppable" ).droppable({
+ drop: function( event, ui ) {
+    valueArray.push(ui.draggable.text());
+    ui.draggable.fadeOut("slow");
+    for (let value of valueArray) {
+       valueArray.pop();
+       printValues += value + "<br/>"
+       $( ".javaValues" ).html("");
+       $( ".javaValues" ).append("<h3>My Values:</h3>" + printValues + "<br/>");
+    }
+     $( this )
+     .addClass( "ui-state-highlight" )
+     .find( "img" )
+    }
+  });
 });
 </script>
