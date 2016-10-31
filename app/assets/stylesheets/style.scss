@@ -64,6 +64,7 @@ input[type=submit]:hover {
 }
 
 #values {
+  padding-bottom: 0px;
   text-align: center;
   h1 {
   color: #8BC34A;
@@ -74,6 +75,17 @@ input[type=submit]:hover {
     color: black;
     margin-top: 0px;
     padding-top: 0px;
+  }
+  .javaValues {
+    h3 {
+      color: #8BC34A;
+      padding-bottom: 0px;
+      margin-bottom: 0px
+    }
+    padding-top: 20px;
+    font-size: 150%;
+    font-weight: bolder;
+    color: purple;
   }
 }
 
@@ -119,8 +131,10 @@ input[type=submit]:hover {
 }
 
 
+
 .draggable {
   display: inline-block;
+  font-weight: bolder;
   background-image: url('bubble.png');
   background-size: 190px 190px;
   background-repeat: no-repeat;
@@ -134,14 +148,14 @@ input[type=submit]:hover {
   }
 }
 
-  .droppable {
-    border-radius: 20%;
-    text-align: center;
-    background-size: contain;
-    display: block;
-    margin: auto;
-    background-size: contain;
-  }
+.droppable {
+  border-radius: 20%;
+  text-align: center;
+  background-size: contain;
+  display: block;
+  margin: auto;
+  background-size: contain;
+}
 
 #flash_success {
   color: green;
